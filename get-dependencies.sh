@@ -10,7 +10,10 @@ if [ "$ARCH" = "x86_64" ]; then
     pacman -Syu --noconfirm mixxx
 else
     pacman -Syu --noconfirm qt6-multimedia
-    make-aur-package mixxx-git
+    #make-aur-package mixxx-git
+    git clone https://gitlab.archlinux.org/archlinux/packaging/packages/mixxx
+    cd mixxx
+    makepkg -si
 fi
 
 echo "Installing debloated packages..."
