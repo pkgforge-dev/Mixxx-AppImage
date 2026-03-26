@@ -11,13 +11,14 @@ pacman -Syu --noconfirm \
         lxqt-qtplugin   \
         pipewire-audio  \
         pipewire-jack   \
+        portaudio       \
         qt6-multimedia  \
         qt6ct
 
 if [ "$ARCH" = "x86_64" ]; then
     pacman -Syu --noconfirm mixxx
 else
-    make-aur-package mixxx
+    make-aur-package mixxx-git
     #git clone https://gitlab.archlinux.org/archlinux/packaging/packages/mixxx
     #cd mixxx
     #useradd -m builder
