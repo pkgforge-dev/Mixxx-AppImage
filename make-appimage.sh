@@ -3,11 +3,11 @@
 set -eu
 
 ARCH=$(uname -m)
-if [ "$ARCH" = "x86_64" ]; then
+#if [ "$ARCH" = "x86_64" ]; then
     VERSION=$(pacman -Q mixxx | awk '{print $2; exit}')
-else
-    VERSION=$(pacman -Q mixxx-git | awk '{print $2; exit}')
-fi
+#else
+#    VERSION=$(pacman -Q mixxx-git | awk '{print $2; exit}')
+#fi
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
