@@ -16,7 +16,6 @@ export DEPLOY_PIPEWIRE=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/mixxx /usr/share/mixxx/*
-# Additional changes can be done in between here
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
